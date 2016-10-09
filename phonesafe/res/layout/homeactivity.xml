@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/blue_bkg" />
+
+        <ImageView
+            android:id="@+id/iv_home_heima"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/heima" />
+
+        <TextView
+            android:id="@+id/tv_home_wocao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="35dp"
+            android:layout_toRightOf="@+id/iv_home_heima"
+            android:text="黑马程序员安全卫士"
+            android:textColor="#aaff00ff"
+            android:textSize="17sp" />
+
+        <com.itheima.ui.facusTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_home_wocao"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/iv_home_heima"
+            android:ellipsize="marquee"
+            android:focusableInTouchMode="true"
+            android:singleLine="true"
+            android:text="黑马安全卫士动态保护你的手机，放心使用，么么哒" />
+        <ImageButton 
+            android:onClick="setting"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/setting"
+            />
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/gv_home_items"
+        android:layout_marginTop="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:numColumns="2" >
+    </GridView>
+
+</LinearLayout>

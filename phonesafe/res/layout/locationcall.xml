@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:background="#550000ff"
+        android:gravity="center"
+        android:text="常用工具"
+        android:textColor="#99000000"
+        android:textSize="19sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+           android:id="@+id/rl_locationcall"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/first_setting_pressed"
+            android:clickable="true" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="归属地查询" />
+        </RelativeLayout>
+        <RelativeLayout
+           android:id="@+id/rl_rocket"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/middle_setting_pressed"
+            android:clickable="true" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="加速小火箭" />
+             <com.itheima.ui.onOffImageButton
+                android:id="@+id/ib_rocket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/on" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_sms_backup"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/middle_setting_pressed"
+            android:clickable="true" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="短信备份" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_sms_restor"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/middle_setting_pressed"
+            android:clickable="true" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="短信还原" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

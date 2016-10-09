@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#550000ff"
+        android:gravity="center"
+        android:text="常用工具"
+        android:textColor="#99000000"
+        android:textSize="19sp" />
+
+    <EditText
+        android:id="@+id/et_phonewhere"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shapeedittext"
+        android:hint="请输入手机号" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal" >
+        <Button 
+            android:onClick="findLocation"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="查询"
+            android:background="@drawable/dgbbutton"
+            />
+        <TextView 
+              android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="归属地:"
+            android:layout_marginLeft="10dp"
+            />
+        <TextView 
+            android:id="@+id/tv_location"
+             android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            android:text=""
+            />
+    </LinearLayout>
+
+</LinearLayout>

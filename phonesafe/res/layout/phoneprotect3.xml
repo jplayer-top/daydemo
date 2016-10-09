@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/titleStyle"
+        android:text="3.设置安全号吗" />
+
+    <TextView
+        style="@style/textViewSetting"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:text="SIM卡如果发生变化"
+        android:textSize="18sp" />
+
+    <View style="@style/horzaticalView" />
+
+    <TextView
+        style="@style/textViewSetting"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="报警短信将会发送到这个手机号上" />
+
+    <View style="@style/horzaticalView" />
+
+    <EditText
+        android:id="@+id/et_phone_phoneprotect3"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:inputType="phone"
+        android:gravity="center_vertical"
+        android:hint="请输入手机号绑定" />
+
+    <Button
+        android:id="@+id/bt_phontprotect3_getNum"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/dgbbutton"
+        android:text="选择安全号码" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ic_jog_dial_answer" />
+
+        <LinearLayout style="@style/LinearLayoutstyle" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/activity_picker_bg_focused" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/activity_picker_bg_focused" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/activity_picker_bg_activated" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/activity_picker_bg_focused" />
+        </LinearLayout>
+
+        <Button
+            android:onClick="setting_to_02"
+            style="@style/firstButton"
+            android:text="上一步" />
+
+        <Button
+            android:onClick="setting_to_04"
+            style="@style/nextButton"
+            android:text="下一步" />
+    </RelativeLayout>
+
+</LinearLayout>
