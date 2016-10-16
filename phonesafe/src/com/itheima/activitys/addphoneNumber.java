@@ -3,10 +3,12 @@ package com.itheima.activitys;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.example.phonesafe.R;
 import com.itheima.db.dao.mySQL;
@@ -27,6 +29,9 @@ public class addphoneNumber extends Activity {
 
 	public void bt_insert(View v) {
 		String phone = et_insertnumber.getText().toString().trim();
+		if(TextUtils.isEmpty(phone)){
+			return;
+		}
 		int id = radiogroup.getCheckedRadioButtonId();
 		String mode = "0";
 		switch (id) {
@@ -58,5 +63,14 @@ public class addphoneNumber extends Activity {
 		Log.i("intent", phone + "----" + mode);
 		setResult(0, intent);
 		finish();
+	}
+	@Override
+	public void onBackPressed() {
+		// TODO Auto-generated method stub
+		String phone = et_insertnumber.getText().toString().trim();
+		if(TextUtils.isEmpty(phone)){
+			Toast.makeText(addphoneNumber.this, "不能为空啊，大哥",0).show();
+			return;
+		}
 	}
 }

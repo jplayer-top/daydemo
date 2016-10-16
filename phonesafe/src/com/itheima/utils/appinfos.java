@@ -9,6 +9,7 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 import android.os.Environment;
+import android.os.SystemClock;
 import android.text.format.Formatter;
 
 public class appinfos {
@@ -23,14 +24,25 @@ public class appinfos {
 			String appname = applicationInfo.loadLabel(packagemanager)
 					.toString();
 			Drawable appicon = applicationInfo.loadIcon(packagemanager);
+			int flag = applicationInfo.flags;
 			appInfosdoman appInfo = new appInfosdoman();
+			if ((flag & ApplicationInfo.FLAG_SYSTEM) != 0) {
+				appInfo.setSystemApp(true);
+			} else {
+				appInfo.setSystemApp(false);
+			}
+			if ((flag & ApplicationInfo.FLAG_EXTERNAL_STORAGE) != 0) {
+				appInfo.setEXetary(true);
+			} else {
+				appInfo.setEXetary(false);
+			}
 			appInfo.setAppicon(appicon);
 			appInfo.setAppname(appname);
 			appInfo.setPackagename(pacakgename);
 			appInfo.setSize(size);
 			appInfos.add(appInfo);
-			System.out.println(appInfo.toString());
 		}
+		SystemClock.sleep(2000);
 		return appInfos;
 	}
 

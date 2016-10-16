@@ -93,7 +93,7 @@ public class callintercept extends Service {
 					if (mode.equals("全选") || mode.equals("电话")) {
 						Log.i("call", mode);
 						try {
-							// ITelephony.Stub.asInterface(ServiceManager.getService(Context.TELEPHONY_SERVICE));
+							//ITelephony.Stub.asInterface(ServiceManager.getService(Context.TELEPHONY_SERVICE));
 							Class<?> clazz = getClassLoader().loadClass(
 									"android.os.ServiceManager");
 							Method method = clazz.getDeclaredMethod(

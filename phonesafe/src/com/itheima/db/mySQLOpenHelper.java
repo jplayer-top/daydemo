@@ -15,6 +15,8 @@ public class mySQLOpenHelper extends SQLiteOpenHelper {
 	public void onCreate(SQLiteDatabase db) {
 		// TODO Auto-generated method stub
 		db.execSQL("create  table blackphone (_id integer primary key autoincrement,phone varchar(20),mode varchar(10))");
+		// db.execSQL("create  table packagename (_id integer primary key autoincrement,phone varchar(20),mode varchar(10))");
+		db.execSQL("create table allpackagename (_id integer primary key autoincrement, packagename varchar(40) )");
 	}
 
 	@Override

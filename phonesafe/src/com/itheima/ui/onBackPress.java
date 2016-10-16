@@ -1,17 +1,15 @@
 package com.itheima.ui;
 
-import com.itheima.activitys.homeActivity;
-import com.itheima.activitys.phontprotect2;
-import com.itheima.activitys.phontprotect4;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
 import android.util.Log;
+
+import com.itheima.activitys.homeActivity;
 
 public class onBackPress {
 	public static void setOnbackpress(final Context context) {
@@ -23,10 +21,9 @@ public class onBackPress {
 
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
-				// TODO Auto-generated method stub
-				Intent intent = new Intent(context,
-						homeActivity.class);
+				Intent intent = new Intent(context, homeActivity.class);
 				context.startActivity(intent);
+				//不明白为什么会这样----------
 				((Activity) context).finish();
 			}
 		});

@@ -62,10 +62,10 @@ public class blackPhone extends Activity {
 						ms.update(list.get(position).getPhone(), items[which]);
 						list.get(position).setMode( items[which]);
 						list.set(position,list.get(position) );
+						dialog.dismiss();
 						adapter.notifyDataSetChanged();
 					}
 				});
-				builder.setNegativeButton("cancel", null);
 				builder.show();
 				return true;
 			}
@@ -192,6 +192,10 @@ public class blackPhone extends Activity {
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// TODO Auto-generated method stub
 		super.onActivityResult(requestCode, resultCode, data);
+		//不能在这里定义判断是否为空
+		if(data.getStringExtra("phone")==null){
+			return;
+		}
 		String insertphone = data.getStringExtra("phone");
 		String insertmode = data.getStringExtra("mode");
 		boolean flag = data.getBooleanExtra("flag", false);

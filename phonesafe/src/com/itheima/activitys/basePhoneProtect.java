@@ -10,10 +10,10 @@ import android.widget.Toast;
 
 public abstract class basePhoneProtect extends Activity {
 	private GestureDetector mGestureDetector;
-	protected SharedPreferences sp ;
+	//初始化SharedPreferences 继承子类会使用到
+	protected SharedPreferences sp;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		mGestureDetector = new GestureDetector(this,
 				new GestureDetector.SimpleOnGestureListener() {
@@ -21,7 +21,6 @@ public abstract class basePhoneProtect extends Activity {
 					@Override
 					public boolean onFling(MotionEvent e1, MotionEvent e2,
 							float velocityX, float velocityY) {
-						// TODO Auto-generated method stub
 						if (velocityX < 50) {
 							Toast.makeText(basePhoneProtect.this, "滑动过慢", 0)
 									.show();
@@ -49,10 +48,11 @@ public abstract class basePhoneProtect extends Activity {
 				});
 	}
 
+	/**
+	 * GestureDetector(手势监听) 是否匹配 触摸事件
+	 */
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
-		// TODO Auto-generated method stub
-		//
 		return mGestureDetector.onTouchEvent(event);
 	}
 
@@ -61,6 +61,7 @@ public abstract class basePhoneProtect extends Activity {
 	public abstract void pre();
 
 	public void openNewActivity(Class<?> clazz) {
+		// 知道为啥可以用这个this了不?因为getApplicationContext()是全局上下文
 		Intent intent = new Intent(basePhoneProtect.this, clazz);
 		startActivity(intent);
 		finish();

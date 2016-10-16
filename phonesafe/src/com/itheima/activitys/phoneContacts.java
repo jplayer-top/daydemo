@@ -14,6 +14,7 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.phonesafe.R;
 import com.itheima.utils.getPhoneNum;
@@ -23,6 +24,7 @@ public class phoneContacts extends Activity {
 	private List<phones> list;
 	private ListView lv;
 	private LinearLayout ll_loading;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -37,7 +39,15 @@ public class phoneContacts extends Activity {
 				runOnUiThread(new Runnable() {
 					@Override
 					public void run() {
-						// TODO Auto-generated method stub
+						if (list.size() == 0) {
+							Toast.makeText(getApplicationContext(), "通讯录没有条目",
+									0).show();
+							Intent intent = new Intent(phoneContacts.this,
+									phontprotect3.class);
+							intent.putExtra("phonenum", "");
+							setResult(0, intent);
+							finish();
+						}
 						lv.setAdapter(new myBaseAdapter());
 						ll_loading.setVisibility(View.INVISIBLE);
 					}
@@ -59,11 +69,22 @@ public class phoneContacts extends Activity {
 			}
 		});
 	}
+/**
+ * 重写返回键方法，如果没有选择条目，将会返回一个空字符串
+ * 
+ */
+	@Override
+	public void onBackPressed() {
+		Intent intent = new Intent(phoneContacts.this,
+				phontprotect3.class);
+		intent.putExtra("phonenum", "");
+		setResult(0, intent);
+		finish();
+	}
 
 	private class myBaseAdapter extends BaseAdapter {
 		@Override
 		public int getCount() {
-			// TODO Auto-generated method stub
 			return list.size();
 		}
 

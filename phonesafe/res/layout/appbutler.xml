@@ -30,9 +30,42 @@
             android:text="机身内存可用:" />
     </LinearLayout>
 
-    <ListView
+    <FrameLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" >
-    </ListView>
+
+        <LinearLayout
+            android:id="@+id/ll_infos_loadding"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="拼命加载中" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_infos"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </ListView>
+
+        <TextView
+            android:id="@+id/tv_visible"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#88000000"
+            android:text="用户安装的应用程序:4"
+            android:textColor="#aaffffff"
+            android:visibility="invisible" />
+    </FrameLayout>
 
 </LinearLayout>

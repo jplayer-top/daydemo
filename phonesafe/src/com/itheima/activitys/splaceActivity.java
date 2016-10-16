@@ -30,10 +30,10 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.SystemClock;
 import android.util.Log;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.phonesafe.R;
+import com.itheima.services.update;
 import com.itheima.utils.StreamOutput;
 import com.lidroid.xutils.HttpUtils;
 import com.lidroid.xutils.exception.HttpException;
@@ -48,6 +48,7 @@ public class splaceActivity extends Activity {
 	private String versionName;
 	private long startTime;
 	private long endTime;
+	// handler 线程中发回数据更新UI
 	private Handler handler = new Handler() {
 		public void handleMessage(Message msg) {
 			switch (msg.what) {
@@ -63,52 +64,65 @@ public class splaceActivity extends Activity {
 
 	};
 
+	/**
+	 * 将资源文件中的文件导入到手机储存中
+	 * 
+	 * @param path
+	 *            文件的地址 存在以assets中只需写文件名就可以，比如 path = "address.db"
+	 */
+	private void createFile(String path) {
+		try {
+			File file = new File(getFilesDir(), path);
+			if (!file.exists()) {
+				InputStream is = getAssets().open(path);
+				OutputStream os = new FileOutputStream(file);
+				int len;
+				byte[] buffer = new byte[1024];
+				while ((len = is.read(buffer)) != -1) {
+					os.write(buffer, 0, len);
+				}
+				os.close();
+				is.close();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.splash_activity);
+		// 耗时的逻辑放在子线程中，不过好像没必要放在这样的子线程中
+		//开启病毒库自动更新的service
 		runOnUiThread(new Runnable() {
-
 			@Override
 			public void run() {
-				// TODO Auto-generated method stub
-				try {
-					File file = new File(getFilesDir(), "address.db");
-					if (!file.exists()) {
-
-						InputStream is = getAssets().open("address.db");
-						int len;
-						byte[] buffer = new byte[1024];
-						OutputStream os = new FileOutputStream(file);
-						while ((len = is.read(buffer)) != -1) {
-							os.write(buffer, 0, len);
-						}
-						os.close();
-						is.close();
-					}
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-
-				}
+				createFile("address.db");
+				createFile("antivirus.db");
+				Intent intent = new Intent();
+				intent.setClass(getApplicationContext(), update.class);
+				startService(intent);
 			}
 		});
 		mTextView = (TextView) findViewById(R.id.tv_splash_version);
 		PackageInfo packageinfo;
 		try {
+			// 获取包信息，用来获取包的版本号和版本信息等等
 			packageinfo = getPackageManager().getPackageInfo(getPackageName(),
 					0);
 			versionName = packageinfo.versionName;
 			mTextView.setText("版本号：" + versionName);
 		} catch (NameNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		// 在这里判断是否在初始界面检查更新程序
 		SharedPreferences sp = getSharedPreferences("config", MODE_PRIVATE);
 		boolean flag = sp.getBoolean("flag", true);
 		if (flag) {
 			new Thread(new myRunable()).start();
 		} else {
+			//选择不更新的话就会直接等两秒钟进入主界面
 			new Thread() {
 				public void run() {
 					SystemClock.sleep(2000);
@@ -119,8 +133,13 @@ public class splaceActivity extends Activity {
 
 	}
 
+	/**
+	 * 版本不一致选择更新新版本
+	 * 
+	 * @param urlpath
+	 *            json文件解析到的文件地址
+	 */
 	private void downloadVwesion(final String urlpath) {
-		// TODO Auto-generated method stub
 		AlertDialog.Builder builder = new Builder(splaceActivity.this);
 		builder.setCancelable(false);
 		builder.setTitle("update");
@@ -133,7 +152,6 @@ public class splaceActivity extends Activity {
 
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
-				// TODO Auto-generated method stub
 				Log.i(TAG, "ok");
 				HttpUtils http = new HttpUtils();
 				final File file = new File(Environment
@@ -144,13 +162,25 @@ public class splaceActivity extends Activity {
 
 							@Override
 							public void onSuccess(ResponseInfo<File> arg0) {
-								// TODO Auto-generated method stub
 								Log.i(TAG, "success");
+								/*
+								 * <intent-filter> <action
+								 * android:name="android.intent.action.VIEW" />
+								 * <category
+								 * android:name="android.intent.category.DEFAULT"
+								 * /> <data android:scheme="content" /> <data
+								 * android:scheme="file" /> <data
+								 * android:mimeType
+								 * ="application/vnd.android.package-archive" />
+								 * </intent-filter>
+								 */
+								// 上层源码中的安装已应用程序的隐士意图
 								Intent intent = new Intent();
-								intent.setAction("android.intent.action.VIEW");
-								intent.addCategory("android.intent.category.DEFAULT");
-								intent.setDataAndType(Uri.fromFile(file),
-										"application/vnd.android.package-archive");
+								intent.setAction("android.intent.action.VIEW")
+										.addCategory(
+												"android.intent.category.DEFAULT")
+										.setDataAndType(Uri.fromFile(file),
+												"application/vnd.android.package-archive");
 								startActivity(intent);
 								pd.dismiss();
 							}
@@ -158,7 +188,6 @@ public class splaceActivity extends Activity {
 							@Override
 							public void onLoading(long total, long current,
 									boolean isUploading) {
-								// TODO Auto-generated method stub
 								super.onLoading(total, current, isUploading);
 								pd.setMax(100);
 								int progress = (int) ((current / total) * 100);
@@ -168,7 +197,6 @@ public class splaceActivity extends Activity {
 							@Override
 							public void onFailure(HttpException arg0,
 									String arg1) {
-								// TODO Auto-generated method stub
 								Log.i(TAG, "error");
 								pd.dismiss();
 							}
@@ -179,7 +207,6 @@ public class splaceActivity extends Activity {
 
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
-				// TODO Auto-generated method stub
 				Log.i(TAG, "no");
 				loadHomeActivity();
 			}
@@ -193,13 +220,18 @@ public class splaceActivity extends Activity {
 			Message msg = Message.obtain();
 			try {
 				startTime = System.currentTimeMillis();
+				// 获取当前设定的URL
 				URL url = new URL(getResources().getString(R.string.url));
+				// 打开链接
 				HttpURLConnection conn = (HttpURLConnection) url
 						.openConnection();
+				// 设定时长和GET方法
 				conn.setConnectTimeout(3000);
 				conn.setRequestMethod("GET");
+				// 和获取状态码
 				int code = conn.getResponseCode();
 				if (code == 200) {
+					// 通过网页源码流工具类获取json数据并且将数据解析
 					InputStream is = conn.getInputStream();
 					String result = StreamOutput.getJsonString(is);
 					JSONObject jsonObject = new JSONObject(result);
@@ -209,6 +241,7 @@ public class splaceActivity extends Activity {
 					Log.i(TAG, serviceVersion);
 					if (versionName.equals(serviceVersion)) {
 						Log.i(TAG, "版本一致");
+						//选择自动更新后，如果版本一致直接睡3000秒进入主界面
 						SystemClock.sleep(3000);
 						loadHomeActivity();
 					} else {
@@ -225,34 +258,36 @@ public class splaceActivity extends Activity {
 				}
 
 			} catch (MalformedURLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 
 				msg.what = ERROR;
 
 			} catch (NotFoundException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 
 			} catch (JSONException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			} finally {
+				// 在首界面停留够时间
 				endTime = System.currentTimeMillis();
 				long time = endTime - startTime;
 				if (time < 3000) {
+					//版本不一致让他睡够三秒
 					SystemClock.sleep(3000 - time);
 				} else {
 				}
+				//最后选择发送消息，这样能够确保信息发送时间等达到所需要等待的时间
 				handler.sendMessage(msg);
 			}
 
 		}
 	}
 
+	/**
+	 * 进入home界面
+	 */
 	public void loadHomeActivity() {
 		Intent intent = new Intent();
 		intent.setClass(splaceActivity.this, homeActivity.class);

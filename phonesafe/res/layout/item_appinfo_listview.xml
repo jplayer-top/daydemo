@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:orientation="vertical" >
+    <ImageView
+        android:id="@+id/iv_info_icon"
+        android:layout_marginLeft="5dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_cab_done_holo_light" />
+
+    <TextView
+        android:id="@+id/tv_info_appname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/iv_info_icon"
+        android:text="应用程序名称"
+        android:textColor="#FF000000"
+        android:textSize="19sp" />
+
+    <TextView
+        android:id="@+id/tv_info_appsize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_info_appname"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/iv_info_icon"
+        android:text="应用程序大小"
+        android:textColor="#aa000000"
+        android:textSize="14sp" />
+    <ImageView 
+        android:id="@+id/iv_isexeratry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/memory"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="9dp"
+        />
+
+</RelativeLayout>

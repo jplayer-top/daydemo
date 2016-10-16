@@ -7,6 +7,15 @@ public class appInfosdoman {
 	private String appname;
 	private String packagename;
 	private Drawable appicon;
+	private boolean isSystemApp;
+	private boolean isEXetary;
+	public boolean getEXetary() {
+		return isEXetary;
+	}
+
+	public void setEXetary(boolean isEXetary) {
+		this.isEXetary = isEXetary;
+	}
 
 	public long getSize() {
 		return size;
@@ -16,10 +25,21 @@ public class appInfosdoman {
 		this.size = size;
 	}
 
+	public boolean getSystemApp() {
+		return isSystemApp;
+	}
+
+	public void setSystemApp(boolean isSystemApp) {
+		this.isSystemApp = isSystemApp;
+	}
+
+	
+
 	@Override
 	public String toString() {
 		return "appInfosdoman [size=" + size + ", appname=" + appname
-				+ ", packagename=" + packagename + "]";
+				+ ", packagename=" + packagename + ", isSystemApp="
+				+ isSystemApp + ", isEXetary=" + isEXetary + "]";
 	}
 
 	public String getAppname() {

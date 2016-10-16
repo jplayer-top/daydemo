@@ -1,0 +1,437 @@
+android.support.v4.app.BackStackState
+android.support.v4.app.BackStackState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.Fragment$SavedState
+android.support.v4.app.Fragment$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.FragmentManagerState
+android.support.v4.app.FragmentManagerState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.FragmentState
+android.support.v4.app.FragmentState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.FragmentTabHost: void setOnTabChangedListener(android.widget.TabHost$OnTabChangeListener)
+android.support.v4.app.FragmentTabHost$SavedState
+android.support.v4.app.FragmentTabHost$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status[] values()
+android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status valueOf(java.lang.String)
+android.support.v4.view.PagerTabStrip: void setTabIndicatorColor(int)
+android.support.v4.view.PagerTabStrip: void setTabIndicatorColorResource(int)
+android.support.v4.view.PagerTabStrip: int getTabIndicatorColor()
+android.support.v4.view.PagerTabStrip: void setTextSpacing(int)
+android.support.v4.view.PagerTabStrip: void setBackgroundDrawable(android.graphics.drawable.Drawable)
+android.support.v4.view.PagerTabStrip: void setBackgroundColor(int)
+android.support.v4.view.PagerTabStrip: void setBackgroundResource(int)
+android.support.v4.view.PagerTabStrip: void setDrawFullUnderline(boolean)
+android.support.v4.view.PagerTabStrip: boolean getDrawFullUnderline()
+android.support.v4.view.PagerTabStrip: int getMinHeight()
+android.support.v4.view.PagerTitleStrip: void setSingleLineAllCaps(android.widget.TextView)
+android.support.v4.view.PagerTitleStrip: void setTextSpacing(int)
+android.support.v4.view.PagerTitleStrip: int getTextSpacing()
+android.support.v4.view.PagerTitleStrip: void setNonPrimaryAlpha(float)
+android.support.v4.view.PagerTitleStrip: void setTextColor(int)
+android.support.v4.view.PagerTitleStrip: void setGravity(int)
+android.support.v4.view.PagerTitleStrip: int getMinHeight()
+android.support.v4.view.ViewPager: void setScrollState(int)
+android.support.v4.view.ViewPager: void setAdapter(android.support.v4.view.PagerAdapter)
+android.support.v4.view.ViewPager: android.support.v4.view.PagerAdapter getAdapter()
+android.support.v4.view.ViewPager: void setOnAdapterChangeListener(android.support.v4.view.ViewPager$OnAdapterChangeListener)
+android.support.v4.view.ViewPager: void setCurrentItem(int)
+android.support.v4.view.ViewPager: int getCurrentItem()
+android.support.v4.view.ViewPager: void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)
+android.support.v4.view.ViewPager: void setChildrenDrawingOrderEnabledCompat(boolean)
+android.support.v4.view.ViewPager: int getOffscreenPageLimit()
+android.support.v4.view.ViewPager: void setOffscreenPageLimit(int)
+android.support.v4.view.ViewPager: void setPageMargin(int)
+android.support.v4.view.ViewPager: int getPageMargin()
+android.support.v4.view.ViewPager: void setPageMarginDrawable(android.graphics.drawable.Drawable)
+android.support.v4.view.ViewPager: void setPageMarginDrawable(int)
+android.support.v4.view.ViewPager: void setScrollingCacheEnabled(boolean)
+android.support.v4.view.ViewPager$SavedState
+android.support.v4.view.ViewPager$SavedState: android.os.Parcelable$Creator CREATOR
+com.example.phonesafe.R$anim: int alpha_anim_in
+com.example.phonesafe.R$anim: int anim_in
+com.example.phonesafe.R$anim: int anim_left_in
+com.example.phonesafe.R$anim: int anim_left_out
+com.example.phonesafe.R$anim: int anim_out
+com.example.phonesafe.R$anim: int cycle_7
+com.example.phonesafe.R$anim: int shake
+com.example.phonesafe.R$array: int toolsArray
+com.example.phonesafe.R$array: int toolsDescip
+com.example.phonesafe.R$dimen: int activity_horizontal_margin
+com.example.phonesafe.R$dimen: int activity_vertical_margin
+com.example.phonesafe.R$drawable: int activity_picker_bg_activated
+com.example.phonesafe.R$drawable: int activity_picker_bg_focused
+com.example.phonesafe.R$drawable: int add_phone
+com.example.phonesafe.R$drawable: int antispam_report_button
+com.example.phonesafe.R$drawable: int antispam_report_button_press
+com.example.phonesafe.R$drawable: int bind
+com.example.phonesafe.R$drawable: int blue_bkg
+com.example.phonesafe.R$drawable: int call_locate_blue
+com.example.phonesafe.R$drawable: int call_locate_gray
+com.example.phonesafe.R$drawable: int call_locate_green
+com.example.phonesafe.R$drawable: int call_locate_orange
+com.example.phonesafe.R$drawable: int call_locate_white
+com.example.phonesafe.R$drawable: int clean_cache_icon
+com.example.phonesafe.R$drawable: int clean_cache_icon_pressed
+com.example.phonesafe.R$drawable: int clean_sdcard_icon
+com.example.phonesafe.R$drawable: int clean_sdcard_icon_pressed
+com.example.phonesafe.R$drawable: int cygj
+com.example.phonesafe.R$drawable: int deletedb
+com.example.phonesafe.R$drawable: int desktop_rocket_launch_1
+com.example.phonesafe.R$drawable: int desktop_rocket_launch_2
+com.example.phonesafe.R$drawable: int desktop_smoke_m
+com.example.phonesafe.R$drawable: int desktop_smoke_t
+com.example.phonesafe.R$drawable: int dg_btn_confirm_normal
+com.example.phonesafe.R$drawable: int dg_btn_confirm_select
+com.example.phonesafe.R$drawable: int dg_button_cancel_select
+com.example.phonesafe.R$drawable: int dgbbutton
+com.example.phonesafe.R$drawable: int dialog_title_default_icon
+com.example.phonesafe.R$drawable: int empty
+com.example.phonesafe.R$drawable: int first_normal
+com.example.phonesafe.R$drawable: int first_pressed
+com.example.phonesafe.R$drawable: int first_setting_pressed
+com.example.phonesafe.R$drawable: int function_greenbutton_normal
+com.example.phonesafe.R$drawable: int function_greenbutton_pressed
+com.example.phonesafe.R$drawable: int function_greenbutton_selector
+com.example.phonesafe.R$drawable: int gv_home_press
+com.example.phonesafe.R$drawable: int heima
+com.example.phonesafe.R$drawable: int ic_cab_done_holo_light
+com.example.phonesafe.R$drawable: int ic_clear_normal
+com.example.phonesafe.R$drawable: int ic_delete
+com.example.phonesafe.R$drawable: int ic_delete_btn
+com.example.phonesafe.R$drawable: int ic_delete_btn_focused
+com.example.phonesafe.R$drawable: int ic_jog_dial_answer
+com.example.phonesafe.R$drawable: int ic_launcher
+com.example.phonesafe.R$drawable: int ic_menu_add_normal
+com.example.phonesafe.R$drawable: int ic_menu_add_pressed
+com.example.phonesafe.R$drawable: int img1
+com.example.phonesafe.R$drawable: int img2
+com.example.phonesafe.R$drawable: int img3
+com.example.phonesafe.R$drawable: int img4
+com.example.phonesafe.R$drawable: int jcgl
+com.example.phonesafe.R$drawable: int kg_security_lock_focused
+com.example.phonesafe.R$drawable: int last_normal
+com.example.phonesafe.R$drawable: int last_pressed
+com.example.phonesafe.R$drawable: int last_setting_pressed
+com.example.phonesafe.R$drawable: int lltj
+com.example.phonesafe.R$drawable: int local_popup_bg
+com.example.phonesafe.R$drawable: int lock
+com.example.phonesafe.R$drawable: int lock_unlock_setting
+com.example.phonesafe.R$drawable: int main_icon
+com.example.phonesafe.R$drawable: int memory
+com.example.phonesafe.R$drawable: int middle
+com.example.phonesafe.R$drawable: int middle_normal
+com.example.phonesafe.R$drawable: int middle_setting_pressed
+com.example.phonesafe.R$drawable: int off
+com.example.phonesafe.R$drawable: int on
+com.example.phonesafe.R$drawable: int on_off_setting
+com.example.phonesafe.R$drawable: int phone
+com.example.phonesafe.R$drawable: int progress_horizontal
+com.example.phonesafe.R$drawable: int rjgj
+com.example.phonesafe.R$drawable: int rocket
+com.example.phonesafe.R$drawable: int sd
+com.example.phonesafe.R$drawable: int security_progress
+com.example.phonesafe.R$drawable: int security_progress_bg
+com.example.phonesafe.R$drawable: int set_paswword
+com.example.phonesafe.R$drawable: int setting
+com.example.phonesafe.R$drawable: int setup1
+com.example.phonesafe.R$drawable: int shapeedittext
+com.example.phonesafe.R$drawable: int sjfd
+com.example.phonesafe.R$drawable: int sjsd
+com.example.phonesafe.R$drawable: int splash
+com.example.phonesafe.R$drawable: int srlj
+com.example.phonesafe.R$drawable: int szzx
+com.example.phonesafe.R$drawable: int traffic1
+com.example.phonesafe.R$drawable: int traffic_icon
+com.example.phonesafe.R$drawable: int unlock
+com.example.phonesafe.R$drawable: int widget_bg_portrait
+com.example.phonesafe.R$drawable: int widget_bg_portrait_child
+com.example.phonesafe.R$drawable: int widget_bg_portrait_child_divider
+com.example.phonesafe.R$drawable: int xtjs
+com.example.phonesafe.R$id: int action_settings
+com.example.phonesafe.R$id: int bt_cancle
+com.example.phonesafe.R$id: int bt_cleanAll
+com.example.phonesafe.R$id: int bt_ok
+com.example.phonesafe.R$id: int bt_phontprotect3_getNum
+com.example.phonesafe.R$id: int btn_clear
+com.example.phonesafe.R$id: int cb_run_check
+com.example.phonesafe.R$id: int cb_select
+com.example.phonesafe.R$id: int et_insertnumber
+com.example.phonesafe.R$id: int et_password
+com.example.phonesafe.R$id: int et_password_enter
+com.example.phonesafe.R$id: int et_password_input
+com.example.phonesafe.R$id: int et_phone_phoneprotect3
+com.example.phonesafe.R$id: int et_phonewhere
+com.example.phonesafe.R$id: int gv_home_items
+com.example.phonesafe.R$id: int ib_loack_app
+com.example.phonesafe.R$id: int ib_rocket
+com.example.phonesafe.R$id: int ib_setting_callphone
+com.example.phonesafe.R$id: int ib_setting_location
+com.example.phonesafe.R$id: int ib_setting_onoff
+com.example.phonesafe.R$id: int iv_addphone
+com.example.phonesafe.R$id: int iv_appicon
+com.example.phonesafe.R$id: int iv_cache_appicon
+com.example.phonesafe.R$id: int iv_clean_cache
+com.example.phonesafe.R$id: int iv_clean_sd
+com.example.phonesafe.R$id: int iv_delete
+com.example.phonesafe.R$id: int iv_empty
+com.example.phonesafe.R$id: int iv_foundLock
+com.example.phonesafe.R$id: int iv_home_heima
+com.example.phonesafe.R$id: int iv_info_icon
+com.example.phonesafe.R$id: int iv_isexeratry
+com.example.phonesafe.R$id: int iv_item
+com.example.phonesafe.R$id: int iv_lock
+com.example.phonesafe.R$id: int iv_phoneprotect02_tolock
+com.example.phonesafe.R$id: int iv_popupwindow_install
+com.example.phonesafe.R$id: int iv_popupwindow_message
+com.example.phonesafe.R$id: int iv_popupwindow_open
+com.example.phonesafe.R$id: int iv_popupwindow_shared
+com.example.phonesafe.R$id: int iv_rocl
+com.example.phonesafe.R$id: int iv_run_appicon
+com.example.phonesafe.R$id: int iv_smoke_bottom
+com.example.phonesafe.R$id: int iv_smoke_top
+com.example.phonesafe.R$id: int iv_splash_main
+com.example.phonesafe.R$id: int ll_clean_cache
+com.example.phonesafe.R$id: int ll_clean_sd
+com.example.phonesafe.R$id: int ll_fragment
+com.example.phonesafe.R$id: int ll_infos_loadding
+com.example.phonesafe.R$id: int ll_load_cache
+com.example.phonesafe.R$id: int ll_loading
+com.example.phonesafe.R$id: int ll_lock
+com.example.phonesafe.R$id: int ll_parent
+com.example.phonesafe.R$id: int ll_unlock
+com.example.phonesafe.R$id: int lv_addcacheItem
+com.example.phonesafe.R$id: int lv_infos
+com.example.phonesafe.R$id: int lv_lockapp
+com.example.phonesafe.R$id: int lv_phone_black
+com.example.phonesafe.R$id: int lv_phonenums
+com.example.phonesafe.R$id: int lv_runningprogress
+com.example.phonesafe.R$id: int lv_singletraffic
+com.example.phonesafe.R$id: int lv_unlockapp
+com.example.phonesafe.R$id: int pb
+com.example.phonesafe.R$id: int pb_cache
+com.example.phonesafe.R$id: int pb_findAntivirus
+com.example.phonesafe.R$id: int process_count
+com.example.phonesafe.R$id: int process_memory
+com.example.phonesafe.R$id: int radioGroup
+com.example.phonesafe.R$id: int rb_all
+com.example.phonesafe.R$id: int rb_message
+com.example.phonesafe.R$id: int rb_phone
+com.example.phonesafe.R$id: int rl_app_lock
+com.example.phonesafe.R$id: int rl_bg_location
+com.example.phonesafe.R$id: int rl_locationcall
+com.example.phonesafe.R$id: int rl_phoneprotect2
+com.example.phonesafe.R$id: int rl_phones
+com.example.phonesafe.R$id: int rl_rocket
+com.example.phonesafe.R$id: int rl_setEndChecked
+com.example.phonesafe.R$id: int rl_sms_backup
+com.example.phonesafe.R$id: int rl_sms_restor
+com.example.phonesafe.R$id: int rl_update_setting
+com.example.phonesafe.R$id: int rl_visible
+com.example.phonesafe.R$id: int sd_content
+com.example.phonesafe.R$id: int sd_handle
+com.example.phonesafe.R$id: int tv_alltraffic
+com.example.phonesafe.R$id: int tv_applock
+com.example.phonesafe.R$id: int tv_appname
+com.example.phonesafe.R$id: int tv_appunlock
+com.example.phonesafe.R$id: int tv_cache_appname
+com.example.phonesafe.R$id: int tv_cachesize
+com.example.phonesafe.R$id: int tv_canuseavimeo
+com.example.phonesafe.R$id: int tv_clean_cache
+com.example.phonesafe.R$id: int tv_clean_sd
+com.example.phonesafe.R$id: int tv_findsafe
+com.example.phonesafe.R$id: int tv_gtraffic
+com.example.phonesafe.R$id: int tv_home_wocao
+com.example.phonesafe.R$id: int tv_info_appname
+com.example.phonesafe.R$id: int tv_info_appsize
+com.example.phonesafe.R$id: int tv_item_desc
+com.example.phonesafe.R$id: int tv_item_main
+com.example.phonesafe.R$id: int tv_location
+com.example.phonesafe.R$id: int tv_lockcounts
+com.example.phonesafe.R$id: int tv_phonemode
+com.example.phonesafe.R$id: int tv_phonename
+com.example.phonesafe.R$id: int tv_phonenum
+com.example.phonesafe.R$id: int tv_phonenumber
+com.example.phonesafe.R$id: int tv_phoneprotect_phonenum
+com.example.phonesafe.R$id: int tv_phoneprotect_result
+com.example.phonesafe.R$id: int tv_ram
+com.example.phonesafe.R$id: int tv_rom
+com.example.phonesafe.R$id: int tv_run_appname
+com.example.phonesafe.R$id: int tv_run_appsize
+com.example.phonesafe.R$id: int tv_runprogress
+com.example.phonesafe.R$id: int tv_scan_appcache
+com.example.phonesafe.R$id: int tv_splash_version
+com.example.phonesafe.R$id: int tv_toastlocation
+com.example.phonesafe.R$id: int tv_unlockcounts
+com.example.phonesafe.R$id: int tv_visible
+com.example.phonesafe.R$layout: int addphonenumber
+com.example.phonesafe.R$layout: int antivirus
+com.example.phonesafe.R$layout: int appbutler
+com.example.phonesafe.R$layout: int applock
+com.example.phonesafe.R$layout: int blackphoneactivity
+com.example.phonesafe.R$layout: int cache_clean
+com.example.phonesafe.R$layout: int enterpassword
+com.example.phonesafe.R$layout: int enterpasword
+com.example.phonesafe.R$layout: int home_gv_item
+com.example.phonesafe.R$layout: int homeactivity
+com.example.phonesafe.R$layout: int item_appinfo_listview
+com.example.phonesafe.R$layout: int item_cache
+com.example.phonesafe.R$layout: int item_lock
+com.example.phonesafe.R$layout: int item_popupwindow
+com.example.phonesafe.R$layout: int item_runprogress
+com.example.phonesafe.R$layout: int item_unlock
+com.example.phonesafe.R$layout: int items_findblacknummber
+com.example.phonesafe.R$layout: int items_phonenum
+com.example.phonesafe.R$layout: int items_toast
+com.example.phonesafe.R$layout: int locationcall
+com.example.phonesafe.R$layout: int mycacheclear
+com.example.phonesafe.R$layout: int mytraffic
+com.example.phonesafe.R$layout: int passworddialog
+com.example.phonesafe.R$layout: int phone_contacts
+com.example.phonesafe.R$layout: int phoneprotect
+com.example.phonesafe.R$layout: int phoneprotect1
+com.example.phonesafe.R$layout: int phoneprotect2
+com.example.phonesafe.R$layout: int phoneprotect3
+com.example.phonesafe.R$layout: int phoneprotect4
+com.example.phonesafe.R$layout: int process_widget
+com.example.phonesafe.R$layout: int runninprogress
+com.example.phonesafe.R$layout: int sd_clean
+com.example.phonesafe.R$layout: int setting_home
+com.example.phonesafe.R$layout: int smoketoast
+com.example.phonesafe.R$layout: int splash_activity
+com.example.phonesafe.R$layout: int wherecall
+com.example.phonesafe.R$menu: int main
+com.example.phonesafe.R$raw: int ylzs
+com.example.phonesafe.R$string: int action_settings
+com.example.phonesafe.R$string: int app_name
+com.example.phonesafe.R$string: int hello_world
+com.example.phonesafe.R$string: int sample_device_admin
+com.example.phonesafe.R$string: int sample_device_admin_description
+com.example.phonesafe.R$string: int url
+com.example.phonesafe.R$style: int AppBaseTheme
+com.example.phonesafe.R$style: int AppTheme
+com.example.phonesafe.R$style: int LinearLayoutstyle
+com.example.phonesafe.R$style: int firstButton
+com.example.phonesafe.R$style: int horzaticalView
+com.example.phonesafe.R$style: int nextButton
+com.example.phonesafe.R$style: int textViewSetting
+com.example.phonesafe.R$style: int text_phoneprotect_style
+com.example.phonesafe.R$style: int titleStyle
+com.example.phonesafe.R$xml: int device_admin_sample
+com.example.phonesafe.R$xml: int process_widget_provider
+com.itheima.activitys.addphoneNumber
+com.itheima.activitys.addphoneNumber: addphoneNumber()
+com.itheima.activitys.addphoneNumber: void bt_insert(android.view.View)
+com.itheima.activitys.antivirus
+com.itheima.activitys.antivirus: antivirus()
+com.itheima.activitys.antivirus: void bt_fingantirious(android.view.View)
+com.itheima.activitys.appbutler
+com.itheima.activitys.appbutler: appbutler()
+com.itheima.activitys.appbutler: void onClick(android.view.View)
+com.itheima.activitys.applock
+com.itheima.activitys.applock: applock()
+com.itheima.activitys.applock: void onClick(android.view.View)
+com.itheima.activitys.basePhoneProtect
+com.itheima.activitys.basePhoneProtect: basePhoneProtect()
+com.itheima.activitys.blackPhone
+com.itheima.activitys.blackPhone: blackPhone()
+com.itheima.activitys.enterPassword
+com.itheima.activitys.enterPassword: enterPassword()
+com.itheima.activitys.homeActivity
+com.itheima.activitys.homeActivity: homeActivity()
+com.itheima.activitys.homeActivity: void setting(android.view.View)
+com.itheima.activitys.locationcall
+com.itheima.activitys.locationcall: locationcall()
+com.itheima.activitys.myCacheClear
+com.itheima.activitys.myCacheClear: myCacheClear()
+com.itheima.activitys.myCacheClear: void onClick(android.view.View)
+com.itheima.activitys.myRuningProgress
+com.itheima.activitys.myRuningProgress: myRuningProgress()
+com.itheima.activitys.myRuningProgress: void bt_reverse(android.view.View)
+com.itheima.activitys.myRuningProgress: void bt_selectAll(android.view.View)
+com.itheima.activitys.myRuningProgress: void bt_killprogress(android.view.View)
+com.itheima.activitys.myTrafficStats
+com.itheima.activitys.myTrafficStats: myTrafficStats()
+com.itheima.activitys.phoneContacts
+com.itheima.activitys.phoneContacts: phoneContacts()
+com.itheima.activitys.phontprotect
+com.itheima.activitys.phontprotect: phontprotect()
+com.itheima.activitys.phontprotect1
+com.itheima.activitys.phontprotect1: phontprotect1()
+com.itheima.activitys.phontprotect1: void setting_to_02(android.view.View)
+com.itheima.activitys.phontprotect2
+com.itheima.activitys.phontprotect2: phontprotect2()
+com.itheima.activitys.phontprotect2: void setting_to_01(android.view.View)
+com.itheima.activitys.phontprotect2: void setting_to_03(android.view.View)
+com.itheima.activitys.phontprotect3
+com.itheima.activitys.phontprotect3: phontprotect3()
+com.itheima.activitys.phontprotect3: void setting_to_02(android.view.View)
+com.itheima.activitys.phontprotect3: void setting_to_04(android.view.View)
+com.itheima.activitys.phontprotect4
+com.itheima.activitys.phontprotect4: phontprotect4()
+com.itheima.activitys.phontprotect4: void setting_to_03(android.view.View)
+com.itheima.activitys.phontprotect4: void setting_to_end(android.view.View)
+com.itheima.activitys.settingActivity
+com.itheima.activitys.settingActivity: settingActivity()
+com.itheima.activitys.smoketoast
+com.itheima.activitys.smoketoast: smoketoast()
+com.itheima.activitys.splaceActivity
+com.itheima.activitys.splaceActivity: splaceActivity()
+com.itheima.activitys.wherecall
+com.itheima.activitys.wherecall: wherecall()
+com.itheima.activitys.wherecall: void findLocation(android.view.View)
+com.itheima.broadcastReceiver.SMS_Receiver
+com.itheima.broadcastReceiver.SMS_Receiver: SMS_Receiver()
+com.itheima.broadcastReceiver.killprogress
+com.itheima.broadcastReceiver.killprogress: killprogress()
+com.itheima.broadcastReceiver.myAdministration
+com.itheima.broadcastReceiver.myAdministration: myAdministration()
+com.itheima.broadcastReceiver.opensevice
+com.itheima.broadcastReceiver.opensevice: opensevice()
+com.itheima.broadcastReceiver.phonesafewidget
+com.itheima.broadcastReceiver.phonesafewidget: phonesafewidget()
+com.itheima.broadcastReceiver.sondRecevices
+com.itheima.broadcastReceiver.sondRecevices: sondRecevices()
+com.itheima.services.callintercept
+com.itheima.services.callintercept: callintercept()
+com.itheima.services.getRelLocation
+com.itheima.services.getRelLocation: getRelLocation()
+com.itheima.services.rockettosat
+com.itheima.services.rockettosat: rockettosat()
+com.itheima.services.scanCacheService
+com.itheima.services.scanCacheService: scanCacheService()
+com.itheima.services.toastlocation
+com.itheima.services.toastlocation: toastlocation()
+com.itheima.services.update
+com.itheima.services.update: update()
+com.itheima.services.watchdog
+com.itheima.services.watchdog: watchdog()
+com.itheima.services.widgetservice
+com.itheima.services.widgetservice: widgetservice()
+com.itheima.ui.facusTextView
+com.itheima.ui.facusTextView: facusTextView(android.content.Context,android.util.AttributeSet,int)
+com.itheima.ui.facusTextView: facusTextView(android.content.Context,android.util.AttributeSet)
+com.itheima.ui.facusTextView: facusTextView(android.content.Context)
+com.itheima.ui.lock_unlockImageView
+com.itheima.ui.lock_unlockImageView: lock_unlockImageView(android.content.Context,android.util.AttributeSet,int)
+com.itheima.ui.lock_unlockImageView: lock_unlockImageView(android.content.Context,android.util.AttributeSet)
+com.itheima.ui.lock_unlockImageView: lock_unlockImageView(android.content.Context)
+com.itheima.ui.lock_unlockImageView: boolean getLockphone()
+com.itheima.ui.lock_unlockImageView: void setLockphone(boolean)
+com.itheima.ui.onOffImageButton
+com.itheima.ui.onOffImageButton: onOffImageButton(android.content.Context,android.util.AttributeSet,int)
+com.itheima.ui.onOffImageButton: onOffImageButton(android.content.Context,android.util.AttributeSet)
+com.itheima.ui.onOffImageButton: onOffImageButton(android.content.Context)
+com.itheima.ui.onOffImageButton: boolean getFlag()
+com.itheima.ui.onOffImageButton: void setFlag(boolean)
+com.lidroid.xutils.bitmap.callback.BitmapLoadFrom: com.lidroid.xutils.bitmap.callback.BitmapLoadFrom[] values()
+com.lidroid.xutils.bitmap.callback.BitmapLoadFrom: com.lidroid.xutils.bitmap.callback.BitmapLoadFrom valueOf(java.lang.String)
+com.lidroid.xutils.db.sqlite.ColumnDbType: com.lidroid.xutils.db.sqlite.ColumnDbType[] values()
+com.lidroid.xutils.db.sqlite.ColumnDbType: com.lidroid.xutils.db.sqlite.ColumnDbType valueOf(java.lang.String)
+com.lidroid.xutils.http.HttpHandler$State: com.lidroid.xutils.http.HttpHandler$State[] values()
+com.lidroid.xutils.http.HttpHandler$State: com.lidroid.xutils.http.HttpHandler$State valueOf(java.lang.String)
+com.lidroid.xutils.http.client.HttpRequest$HttpMethod: com.lidroid.xutils.http.client.HttpRequest$HttpMethod[] values()
+com.lidroid.xutils.http.client.HttpRequest$HttpMethod: com.lidroid.xutils.http.client.HttpRequest$HttpMethod valueOf(java.lang.String)
+com.lidroid.xutils.http.client.multipart.HttpMultipartMode: com.lidroid.xutils.http.client.multipart.HttpMultipartMode[] values()
+com.lidroid.xutils.http.client.multipart.HttpMultipartMode: com.lidroid.xutils.http.client.multipart.HttpMultipartMode valueOf(java.lang.String)
+com.lidroid.xutils.task.Priority: com.lidroid.xutils.task.Priority[] values()
+com.lidroid.xutils.task.Priority: com.lidroid.xutils.task.Priority valueOf(java.lang.String)
+com.lidroid.xutils.view.ResType: com.lidroid.xutils.view.ResType[] values()
+com.lidroid.xutils.view.ResType: com.lidroid.xutils.view.ResType valueOf(java.lang.String)

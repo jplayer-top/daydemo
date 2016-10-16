@@ -11,6 +11,11 @@ import android.os.SystemClock;
 import android.util.Log;
 
 public class getPhoneNum {
+	/**
+	 * 根据内容提供者获取联系人数据
+	 * @param context 上下文
+	 * @return
+	 */
 	public static List<phones> phoneContacts(Context context) {
 		ContentResolver resolver = context.getContentResolver();
 		Uri uri = Uri.parse("content://com.android.contacts/raw_contacts");
@@ -43,7 +48,7 @@ public class getPhoneNum {
 		}
 		Log.i("getPhoneNum", list.toString());
 		cursor.close();
-		SystemClock.sleep(10000);
+		SystemClock.sleep(1000);
 		return list;
 	}
 }

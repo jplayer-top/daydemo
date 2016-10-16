@@ -1,8 +1,9 @@
 package com.itheima.activitys;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,7 +14,6 @@ import com.example.phonesafe.R;
 import com.itheima.services.rockettosat;
 import com.itheima.ui.onOffImageButton;
 import com.itheima.utils.ServicesNum;
-import com.itheima.utils.smsInfos;
 import com.itheima.utils.smsbackuptool;
 import com.itheima.utils.smsbackuptool.callBackUp;
 
@@ -21,15 +21,23 @@ public class locationcall extends Activity {
 	private RelativeLayout rl_locationcall;
 	private RelativeLayout rl_sms_backup;
 	private RelativeLayout rl_sms_resore;
-	private RelativeLayout rl_rocket;
 	private onOffImageButton ib_rocket;
 	private ProgressDialog pd;
-
+	private RelativeLayout rl_app_lock;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.locationcall);
+		rl_app_lock = (RelativeLayout) findViewById(R.id.rl_app_lock);
+		rl_app_lock.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent applockIntent = new Intent(getApplicationContext(), applock.class);
+				startActivity(applockIntent);
+			}
+		});
 		ib_rocket = (onOffImageButton) findViewById(R.id.ib_rocket);
 		ib_rocket.setFlag(ServicesNum.getServicesNum(this,
 				"com.itheima.services.rockettosat"));

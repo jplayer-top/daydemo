@@ -18,7 +18,6 @@ public class phontprotect2 extends basePhoneProtect {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.phoneprotect2);
 		sp = getSharedPreferences("config", MODE_PRIVATE);
@@ -26,10 +25,11 @@ public class phontprotect2 extends basePhoneProtect {
 		iv_phoneprotect02_tolock.setLockphone(sp.getBoolean("lockSIM", false));
 		rl_phoneprotect2 = (RelativeLayout) findViewById(R.id.rl_phoneprotect2);
 		rl_phoneprotect2.setOnClickListener(new OnClickListener() {
-
+			/**
+			 * 重写点击事件，选择是否绑定SIM卡
+			 */
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				boolean lockSIM = iv_phoneprotect02_tolock.islock();
 				Toast.makeText(phontprotect2.this, lockSIM + "", 0).show();
 				Editor editor = sp.edit();
@@ -48,7 +48,6 @@ public class phontprotect2 extends basePhoneProtect {
 			}
 		});
 	}
-
 	public void setting_to_01(View v) {
 		openNewActivity(phontprotect1.class);
 		overridePendingTransition(R.anim.anim_left_in, R.anim.anim_left_out);

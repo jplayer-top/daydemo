@@ -34,12 +34,12 @@ public class wherecall extends Activity {
 		String insertNumber = et_number.getText().toString().trim();
 		if (TextUtils.isEmpty(insertNumber)) {
 			//Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
+			//et_number.startAnimation(shake);
 			TranslateAnimation tf = new TranslateAnimation(0.0f, 10.0f, 0, 0);
 			Interpolator inter = new CycleInterpolator(10);
 			tf.setInterpolator(inter);
 			tf.setDuration(300);
 			et_number.startAnimation(tf);
-			//et_number.startAnimation(shake);
 			return;
 		}
 		String location = addressDao.whereAddress(wherecall.this, insertNumber);
